@@ -44,6 +44,47 @@
 .stat-value { font-size: 26px; font-weight: 700; }
 .stat-label { font-size: 12px; color: #6B7E70; margin-top: 4px; }
 
+.status-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 10px 12px;
+  border: 1px solid #D5D0BE;
+  border-radius: 8px;
+  background: #FAF9F4;
+  color: #536558;
+  font-size: 13px;
+  text-align: left;
+}
+
+.status-strip div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.status-strip button {
+  border: 1px solid #C9C2A8;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: #2E4034;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.dot.ok { background: #4C7A3D; }
+.dot.danger { background: #B23A2E; }
+
 .main-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -187,8 +228,99 @@
   border-radius: 6px;
 }
 
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.widget {
+  min-height: 210px;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: minmax(96px, 1fr) 1.1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 8px 0;
+  border-bottom: 1px solid #EEE9DA;
+  text-align: left;
+}
+
+.metric-row span {
+  color: #6B7E70;
+  font-size: 12px;
+}
+
+.metric-row strong {
+  color: #2E4034;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.mini-text {
+  margin-top: 12px;
+  color: #536558;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.chart-panel {
+  min-height: 290px;
+}
+
+.alerts-panel {
+  margin-top: 20px;
+}
+
+.alert-list {
+  display: grid;
+  gap: 10px;
+}
+
+.alert-item {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1.6fr 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid #EEE9DA;
+  color: #536558;
+  font-size: 13px;
+  text-align: left;
+}
+
+.alert-item strong {
+  color: #2E4034;
+}
+
+.alert-item small {
+  color: #7F8F83;
+}
+
 @media (max-width: 800px) {
   .main-grid { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .form-grid { grid-template-columns: 1fr; }
+  .status-strip {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .insight-grid,
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+  .alert-item {
+    grid-template-columns: 1fr;
+  }
 }
