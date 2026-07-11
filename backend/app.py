@@ -110,8 +110,9 @@ def predict():
     irrigation = build_irrigation_advice(payload, stress["condition"], weather_data)
     advisory = build_crop_advisory(stress, irrigation, pest, weather_data)
 
+    sms_requested = str(payload.get("send_sms_if_critical", "")).lower() in ["true", "1", "yes"]
     sms_result = {"sent": False, "skipped": True, "reason": "SMS not requested or not required"}
-    if advisory["sms_required"] and payload.get("send_sms_if_critical"):
+    if advisory["sms_required"] and sms_requested:
         sms_result = send_intelligent_alert(
             alert_type=_alert_type(advisory, weather_data, pest, irrigation),
             location=str(payload.get("field_id")),

@@ -1,4 +1,5 @@
 # ArkTech MVP Implementation Specification
+
 Version: 1.0
 Project: ArkTech – AI-Driven Crop Monitoring + Offline Advisory System
 
@@ -74,6 +75,7 @@ Transform ArkTech into an intelligent farming assistant capable of:
 • Sending intelligent alerts
 • Giving actionable recommendations
 ALL these 6 transformations are mandatoy!!!
+
 ---
 
 # Architecture Principles
@@ -118,6 +120,7 @@ Internet should never be mandatory.
 ---
 
 # FEATURE 1
+
 # Intelligent Weather Monitoring
 
 ## Purpose
@@ -289,6 +292,7 @@ Last Updated
 ---
 
 # FEATURE 2
+
 # Pest Risk Prediction
 
 Purpose
@@ -367,11 +371,11 @@ Prediction Rules
 
 High Humidity
 
-+
+-
 
 High Temperature
 
-+
+-
 
 Leaf Wetness
 
@@ -383,7 +387,7 @@ High fungal infection risk
 
 Dry Weather
 
-+
+-
 
 High Temperature
 
@@ -434,6 +438,7 @@ Never spam duplicate alerts.
 ---
 
 # FEATURE 3
+
 # Offline First Architecture
 
 MOST IMPORTANT FEATURE
@@ -507,6 +512,7 @@ Last Sync Time
 ---
 
 # FEATURE 4
+
 # Smart Irrigation Decision Engine
 
 Current irrigation logic already exists.
@@ -517,19 +523,19 @@ Decision should consider
 
 Moisture
 
-+
+-
 
 Weather
 
-+
+-
 
 Rain Prediction
 
-+
+-
 
 Temperature
 
-+
+-
 
 Growth Stage
 
@@ -571,7 +577,7 @@ Delay Irrigation
 
 Moisture Low
 
-+
+-
 
 Heatwave
 
@@ -598,6 +604,7 @@ Example
 ---
 
 # FEATURE 5
+
 # Intelligent SMS System
 
 Current Twilio integration already exists.
@@ -649,6 +656,7 @@ Cooldown
 ---
 
 # FEATURE 6
+
 # Dashboard Enhancements
 
 Do not redesign UI.
@@ -704,6 +712,7 @@ No redesign.
 ---
 
 # FEATURE 7
+
 # Recommendation Engine
 
 Every prediction should produce an actionable recommendation.
@@ -753,6 +762,7 @@ Avoid fertilizer application.
 ---
 
 # FEATURE 8
+
 # API Layer
 
 Create clean APIs.
@@ -776,6 +786,7 @@ Do not mix business logic with routing.
 ---
 
 # FEATURE 9
+
 # Error Handling
 
 Application must never crash because
@@ -799,6 +810,7 @@ Use graceful fallbacks.
 ---
 
 # FEATURE 10
+
 # Configuration
 
 Everything configurable.
@@ -883,47 +895,33 @@ config/pest
 
 # Implementation Order
 
-1.
-Study entire codebase.
+1.  Study entire codebase.
 
-2.
-Understand architecture.
+2.  Understand architecture.
 
-3.
-Identify reusable modules.
+3.  Identify reusable modules.
 
-4.
-Create implementation plan.
+4.  Create implementation plan.
 
-5.
-List files to modify.
+5.  List files to modify.
 
-6.
-List files to create.
+6.  List files to create.
 
-7.
-Implement Weather.
+7.  Implement Weather.
 
-8.
-Implement Pest.
+8.  Implement Pest.
 
-9.
-Implement Offline Mode.
+9.  Implement Offline Mode.
 
-10.
-Integrate Smart Irrigation.
+10. Integrate Smart Irrigation.
 
-11.
-Extend SMS.
+11. Extend SMS.
 
-12.
-Update Dashboard.
+12. Update Dashboard.
 
-13.
-Testing.
+13. Testing.
 
-14.
-Documentation.
+14. Documentation.
 
 ---
 

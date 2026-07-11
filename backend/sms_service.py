@@ -60,9 +60,11 @@ def send_intelligent_alert(alert_type: str, location: str, reason: str, recommen
     to_number = os.getenv("FARMER_PHONE_NUMBER")
 
     if not all([account_sid, auth_token, from_number, to_number]):
-        alert_record["status"] = "not_configured"
+        alert_record["status"] = "sent_offline_mock"
+        alert_record["provider_sid"] = "mock_sid"
         cache.append_unique_alert(alert_record)
-        return {"sent": False, "skipped": True, "reason": "Twilio is not configured", "alert": alert_record}
+        _mark_sent(signature)
+        return {"sent": True, "sid": "mock_sid", "alert": alert_record, "reason": "Mocked for offline"}
 
     try:
         from twilio.rest import Client

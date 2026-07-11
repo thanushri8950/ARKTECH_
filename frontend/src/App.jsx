@@ -89,7 +89,8 @@ export default function App() {
     setError(null);
     setResult(null);
     try {
-      const res = await axios.post(`${API_URL}/predict`, { ...form, send_sms_if_critical: sendSms });
+      const payload = { ...form, send_sms_if_critical: Boolean(sendSms) };
+      const res = await axios.post(`${API_URL}/predict`, payload);
       setResult(res.data);
       loadDashboard();
     } catch (err) {
