@@ -1,0 +1,18 @@
+{
+  "accuracy": 1.0,
+  "n_train": 120,
+  "n_test": 30,
+  "features": [
+    "ndvi",
+    "ndwi",
+    "vv",
+    "vh",
+    "vv_vh_ratio",
+    "soil_moisture_index",
+    "rainfall",
+    "lst",
+    "crop_stage_flowering",
+    "crop_stage_sowing",
+    "crop_stage_vegetative"
+  ]
+}
