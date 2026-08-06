@@ -1,3 +1,4 @@
+<img width="2126" height="1896" alt="09E7383F-A2C3-4263-A34A-A99BA2E5C043_1_102_o" src="https://github.com/user-attachments/assets/706f14ec-2a1b-4358-9ee3-99b066022509" />
 # ARKTECH_
 
 ArkTech is an AI-driven crop monitoring MVP with crop stress prediction, weather-aware irrigation advice, pest risk prediction, offline cache support, and intelligent SMS alerting.
